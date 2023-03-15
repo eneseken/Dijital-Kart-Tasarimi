@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Team Member Profile Card</title>
+</head>
+
+<body>
+    <div class="card">
+        <section class="main">
+            <p class="name">Hasan Hüseyin Eren</p>
+            <p>AYVİSİT Kurucusu</p>
+        </section>
+
+        <section class="more">
+            <p>Paylaşma Linkleri</p>
+            <div class="social-links">
+                <a href="https://api.whatsapp.com/send/?phone=905352753439&text&type=phone_number&app_absent=0" target="_blank" class="whatsapp">
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://www.instagram.com/hhasan.eren/" target="_blank" class="instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/haski206" target="_blank" class="facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQE7uoM7rjQLPQAAAYbZ_ZDYh6TNUbGSr0gmLyiJuNyJHNe5UEHXZHIMI-FEqaEzSFz1kvUbYO19mtWagwqx7c4tJIb29AC__OepdSlZxIbAH07Y3FVph3SGa6E9E2pgS-XMztw=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fhasanhuseyineren" target="_blank" class="linkedin">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://twitter.com/BitaneHasan" target="_blank" class="twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://t.me/hhasaneren"  target="_blank" class="telegram">
+                    <i class="fab fa-telegram-plane"></i>
+                </a>
+            </div>
+            <p>Şirket Bilgileri</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/ayvisit/" target="_blank" class="company">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/hasan-h%C3%BCseyin-e-4822a2161" target="_blank" class="company">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="mailto:mr.hasaneren1@gmail.com" target="_blank" class="company">
+                  <i class="far fa-envelope"></i>
+                </a>
+            </div>
+            <div class="informations">
+            
+              
+              <button onclick="openPopup1()" class="button">Banka Bilgileri</button>
+              <button onclick="openPopup2()" class="button" >  Fatura Bilgileri</button>
+
+                <div id="popup1" class="popup">
+                  <div class="popup-content">
+                  <h2>İban</h2>
+                  <p>TR24 0001 0012 2995 8958 0950 01</p>
+                  <button onclick="closePopup1()" class="popup-close">X</button>
+                  </div>
+                </div>
+
+                <div id="popup2" class="popup">
+                  <div class="popup-content">
+                  <h2>Fatura Bilgileri</h2>
+                  <p>Ayvisit Bilişim Sistemleri</p>
+                  <button onclick="closePopup2()" class="popup-close">X</button>
+                  </div>
+                </div>
+
+              <!-- <p class="iban"> TR24 0001 0012 2995 8958 0950 01 </p>
+              <p class="invoice">Ayvisit Bilişim Sistemleri</p> -->
+            </div>
+          
+        </section>
+
+        <section class="info">
+            <section>
+              <p> <i class="far fa-address-book"></i> <a href="www.ayvisit.com/hasanhuseyineren.vcf">Rehbere Ekle</a> </p>
+            </section>
+            <section>
+                <p><i class="fas fa-mobile-alt"></i> <a href="tel:+905352753439">Arama Yap</a> </p>
+            </section>
+            <a class="site"  target="_blank" href="https://ayvisit.com/">ayvisit.com</a>
+            <button id="openerBtn">
+                <i class="fas fa-plus"></i>
+                <i class="fas fa-minus"></i>
+            </button>
+        </section>
+    </div>
+
+</body>
+
+<script>
+    var buttonEl = document.getElementById('openerBtn');
+    var cardEl = document.querySelector('.card');
+
+    buttonEl.addEventListener('click', function() {
+        cardEl.classList.toggle('opened');
+    })
+    function openPopup1() {
+  document.getElementById("popup1").style.display = "block";
+}
+
+function closePopup1() {
+  document.getElementById("popup1").style.display = "none";
+}
+
+function openPopup2() {
+  document.getElementById("popup2").style.display = "block";
+}
+
+function closePopup2() {
+  document.getElementById("popup2").style.display = "none";
+}
+
+</script>
+
+
+</html>
